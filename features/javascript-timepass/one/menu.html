@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.container{
+            max-width: 80%;
+            display: block;
+            margin:auto;
+            margin-top:1rem;
+        }
+
+        div.menu{
+            background: pink;
+            position: absolute;
+            width: 100%;
+            left:0;
+            top: 100px;
+            transition: .7s all ease;
+            opacity: 0;
+        }
+
+        div.menu.show{
+           opacity: 1;
+            transform: translate(0) !important;
+        }
+
+        div.menu.upMenu{
+            transform: translateY(0)
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 1rem 2rem;
+            display: block;
+        }
+
+        li + li a{
+            border-top: 1px solid white;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        #direction{
+            margin-bottom: 1rem;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+    <select id="direction">
+        <option value="up">up menu</option>
+        <option value="down">down menu</option>
+        <option value="right">right menu</option>
+        <option value="left">left menu</option>
+    </select>
+
+        <p>menu</p>
+
+       
+
+        <div class="menu">
+            <li><a href="#">item1</a></li>
+            <li><a href="#">item2</a></li>
+            <li><a href="#">item3</a></li>
+            <li><a href="#">item4</a></li>
+            <li><a href="#">item5</a></li>
+            <li><a href="#" id="close">Close</a></li>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
